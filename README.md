@@ -2,8 +2,6 @@
 Group Project
 
 
-Desmond
-TESTING
-Maika
-Daya
-Carlos
+Desmond/Maika Branch
+
+Show Maika
