@@ -1,0 +1,7 @@
+{
+  "name": "191B_Spek",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
