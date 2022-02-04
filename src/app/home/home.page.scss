@@ -2,11 +2,15 @@
 
 ion-header {
   --background: white;
-  text-align: center;
+  // text-align: center;
 }
 
 ion-content {
   --background: #EEEEEE;
+}
+
+ion-icon {
+  color: #E57844;
 }
 
 .footer {
