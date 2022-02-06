@@ -13,21 +13,31 @@
 
 <ion-content [fullscreen]="true">
   <br>
-  <br>
-        <ion-buttons >
-          <ion-button>
-            <ion-icon name = "logs" size = "large" slot = "icon-only" src="assets/icon/logs.svg"></ion-icon>
+  <br> 
+    <ion-toolbar id = "icon_toolbar">
+      <ion-buttons slot = "secondary">
+          <ion-button  id = "log_icon">
+            <ion-icon name = "logs" size = "large" slot = "icon-only" src=".\assets\icon\logs.svg"></ion-icon>
           </ion-button>
         </ion-buttons>
-      
+
+      <ion-buttons slot = "primary">
+          <ion-button  id = "share_icon">
+            <ion-icon name = "share" size = "large" slot = "icon-only" src=".\assets\icon\share_icon.svg"></ion-icon>
+          </ion-button>
+        </ion-buttons> 
+      </ion-toolbar>
+
         <div id="container">
-          
           <strong>Ready to create an app??</strong>
           <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
         </div>
+
       
 </ion-content>
 
 <ion-footer class="footer">
-  <ion-img src=".\assets\bottom_nav.png"></ion-img>
-</ion-footer>
+  <ion-toolbar id = "footer_toolbar">
+    <ion-img src=".\assets\bottom_nav.png"></ion-img>
+  </ion-toolbar>
+</ion-footer>  
