@@ -2,7 +2,7 @@
 
 Team Members: Carlos Guzman, Dayanara Melara, Derek Song, Desmond Garrido, Maika Marin, Nathan Nagata
 
-** Spek is a mobile application catered to business travelers where users can search, review, and read about hotels for fture business travels. **
+**Spek is a mobile application catered to business travelers where users can search, review, and read about hotels for fture business travels.**
 
 [Spek Website](https://www.myspek.com/)
 
