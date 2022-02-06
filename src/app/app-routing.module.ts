@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'log-history',
+    loadChildren: () => import('./log-history/log-history.module').then( m => m.LogHistoryPageModule)
+  },
 ];
 
 @NgModule({

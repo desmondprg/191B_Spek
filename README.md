@@ -1,7 +1,3 @@
-# 191B_Spek
-This is Dayanara & Nathan's branch
-
-#best branch
 # 191B Spek Ionic Application
 
 Team Members: Carlos Guzman, Dayanara Melara, Derek Song, Desmond Garrido, Maika Marin, Nathan Nagata
