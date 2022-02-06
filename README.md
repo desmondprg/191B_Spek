@@ -1,6 +1,6 @@
-# 191B_Spek
-Group Project
-Carlos Guzman, Dayanara Melara, Derek Song, Desmond Garrido, Maika Marin, Nathan Nagata
+# 191B Spek Ionic Application
+
+Team Members: Carlos Guzman, Dayanara Melara, Derek Song, Desmond Garrido, Maika Marin, Nathan Nagata
 
 
 
