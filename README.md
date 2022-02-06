@@ -1,7 +1,3 @@
-# 191B_Spek
-This is Dayanara & Nathan's branch
-
-#best branch
 # 191B Spek Ionic Application
 **Spek is a mobile application catered to business travelers where users can search, review, and read about hotels for fture business travels.**
 
