@@ -10,5 +10,19 @@
 </ion-header>
 
 <ion-content>
+  <br>
+  <br> 
+    <ion-toolbar [routerLink] = "['/form']" id = "icon_toolbar">
+      <ion-buttons slot = "primary">
+          <ion-button  id = "share_icon">
+            <ion-icon name = "share" size = "large" slot = "icon-only" src=".\assets\icon\new_log.svg"></ion-icon>
+          </ion-button>
+        </ion-buttons> 
+      </ion-toolbar>
+
+      <div id="container">
+        <strong>Ready to create an app??</strong>
+        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      </div>
 
 </ion-content>
