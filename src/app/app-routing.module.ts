@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'log-history',
     loadChildren: () => import('./log-history/log-history.module').then( m => m.LogHistoryPageModule)
   },
+  {
+    path: 'form',
+    loadChildren: () => import('./form/form.module').then( m => m.FormPageModule)
+  },
+
 ];
 
 @NgModule({
