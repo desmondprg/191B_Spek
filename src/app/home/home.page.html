@@ -28,38 +28,44 @@
         </ion-buttons> 
       </ion-toolbar>
 
-        
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-        <ion-card>
-          <ion-item>
-            <div style="margin-left: 15px"> Category </div>
-            <div style="margin-left: 75px"> Standing </div>
-            <ion-img style="align-items: right;margin-left: 10px;" src=".\assets\Union.png"></ion-img>
-          </ion-item>
-          <ion-item>
-            <ion-img style="align-items: left;" src=".\assets\shoppingicon.png"></ion-img>
-            <div style="margin-left: 10px"> Shopping </div>
-            <div style="margin-left: 45px"> Average </div>
-          </ion-item>
-          <ion-item>
-            <ion-img style="align-items: left;" src=".\assets\travelicon.png"></ion-img>
-            <div style="margin-left: 10px"> Travel </div>
-            <div style="margin-left: 65px"> Above Average </div>
-          </ion-item>
-          <ion-item>
-            <ion-img style="align-items: left;" src=".\assets\sustainabilityicon.png"></ion-img>
-            <div style="margin-left: 10px"> Sustainability </div>
-            <div style="margin-left: 23px"> No Rating </div>
-          </ion-item>
-        </ion-card>    
+        <div id="container">
+          <strong>Ready to create an app??</strong>
+          <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        </div>
+
+      
 </ion-content>
 
+<ion-card>
+  <ion-item>
+    <div style="margin-left: 15px"> Category </div>
+    <div style="margin-left: 75px"> Standing </div>
+    <ion-buttons>
+      <ion-button>
+        <!-- <ion-img style="align-items: right;margin-left: 10px;" src=".\assets\Union.png"></ion-img> -->
+        <ion-icon slot="icon-only" name="chevron-down"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-item>
+  <ion-item>
+    <ion-img style="align-items: left;" src=".\assets\shoppingicon.png"></ion-img>
+    <div style="margin-left: 10px"> Shopping </div>
+    <div style="margin-left: 45px"> Average </div>
+  </ion-item>
+  <ion-item>
+    <ion-img style="align-items: left;" src=".\assets\travelicon.png"></ion-img>
+    <div style="margin-left: 10px"> Travel </div>
+    <div style="margin-left: 65px"> Above Average </div>
+  </ion-item>
+  <ion-item>
+    <ion-img style="align-items: left;" src=".\assets\sustainabilityicon.png"></ion-img>
+    <div style="margin-left: 10px"> Sustainability </div>
+    <div style="margin-left: 23px"> No Rating </div>
+  </ion-item>
+</ion-card>
 
-
+<ion-footer class="footer">
+  <ion-toolbar id = "footer_toolbar">
+    <ion-img src=".\assets\bottom_nav.png"></ion-img>
+  </ion-toolbar>
+</ion-footer>  
