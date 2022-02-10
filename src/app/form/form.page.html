@@ -5,10 +5,39 @@
           <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>Carbon Footprint</ion-title>
+    <ion-title>New Entry</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+      <ion-segment color="danger"  mode = "ios" [(ngModel)]="type"   (ionChange)="segmentChanged($event)" value = "travel" >
+        <ion-segment-button  value="1">
+          <ion-label>Travel</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          <ion-label>Shopping</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="3">
+          <ion-label>Sustainability</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+
+
+  <div [ngSwitch] = "type">
+    <ion-card *ngSwitchCase="'1'">
+      <ion-card-content>1</ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'2'">
+      <ion-card-content>2</ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'3'">
+      <ion-card-content>3</ion-card-content>
+    </ion-card>
+</div>
+ 
 
 </ion-content>

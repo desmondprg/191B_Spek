@@ -8,13 +8,21 @@ import { Location } from '@angular/common';
 })
 export class FormPage implements OnInit {
 
+  type:String;
   constructor(private location: Location) { }
 
+  
+
   ngOnInit() {
+    this.type = "1";
   }
 
   back():void {
     this.location.back()
+  }
+
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev);
   }
 
 }
