@@ -17,13 +17,13 @@
   <ion-toolbar>
       <ion-segment color="danger"  mode = "ios" [(ngModel)]="type"   (ionChange)="segmentChanged($event)" value = "travel" >
         <ion-segment-button  value="1">
-          <ion-label>Travel</ion-label>
+          <ion-label id="travel">Travel</ion-label>
         </ion-segment-button>
         <ion-segment-button value="2">
-          <ion-label>Shopping</ion-label>
+          <ion-label id="shopping">Shopping</ion-label>
         </ion-segment-button>
         <ion-segment-button value="3">
-          <ion-label>Sustainability</ion-label>
+          <ion-label id="sustainability">Sustainability</ion-label>
         </ion-segment-button>
       </ion-segment>
   </ion-toolbar>
@@ -31,7 +31,25 @@
 
   <div [ngSwitch] = "type">
     <ion-card *ngSwitchCase="'1'">
-      <ion-card-content>1</ion-card-content>
+      <ion-card-content id="q1">What was your primary method of travel?</ion-card-content>
+      <ion-list id= "a1" >
+        <ion-radio-group value="Qtravel" >
+          <ion-item>
+            <ion-label>Plane</ion-label>
+            <ion-radio slot="start" value="biff"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Car</ion-label>
+            <ion-radio slot="start" value="griff"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Bike</ion-label>
+            <ion-radio slot="start" value="buford"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
     </ion-card>
 
     <ion-card *ngSwitchCase="'2'">
@@ -43,5 +61,23 @@
     </ion-card>
 </div>
  
+
+<!-- <ion-button class = "Submit" style="--background: #E57844" > Submit </ion-button> -->
+
+
+
+<ion-grid>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="9" class="ion-text-center">
+      <ion-item lines="none" id="projectTitle" *ngIf="nextOptions == 'previous'">
+        <ion-input name="title" [(ngModel)]="title" class="text-input" placeholder="Project Title"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col size="9" class="ion-text-center">
+      <ion-button class = "Submit" style="--background: #E57844" > Submit </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
 
 </ion-content>
