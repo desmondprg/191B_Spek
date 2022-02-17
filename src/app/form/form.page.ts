@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
 })
 export class FormPage implements OnInit {
 
+  valueSelected:string;
   type:String;
   constructor(private location: Location) { }
 
@@ -23,6 +24,12 @@ export class FormPage implements OnInit {
 
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
+  }
+
+  saveTravel(){
+    var transport = this.valueSelected;
+    console.log("value selected:")
+    console.log(transport);
   }
 
 }

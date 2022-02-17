@@ -33,20 +33,30 @@
     <ion-card *ngSwitchCase="'1'">
       <ion-card-content id="q1">What was your primary method of travel?</ion-card-content>
       <ion-list id= "a1" >
-        <ion-radio-group value="Qtravel" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
           <ion-item>
             <ion-label>Plane</ion-label>
-            <ion-radio slot="start" value="biff"></ion-radio>
+            <ion-radio slot="start" value="plane"></ion-radio>
           </ion-item>
       
           <ion-item>
-            <ion-label>Car</ion-label>
-            <ion-radio slot="start" value="griff"></ion-radio>
+            <ion-label>Car or Rideshare</ion-label>
+            <ion-radio slot="start" value="car"></ion-radio>
           </ion-item>
       
           <ion-item>
             <ion-label>Bike</ion-label>
-            <ion-radio slot="start" value="buford"></ion-radio>
+            <ion-radio slot="start" value="bike"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Walk</ion-label>
+            <ion-radio slot="start" value="Walk"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Public Transportation(Bus,Train)</ion-label>
+            <ion-radio slot="start" value="public"></ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-list>
@@ -62,7 +72,7 @@
 </div>
  
 
-<!-- <ion-button class = "Submit" style="--background: #E57844" > Submit </ion-button> -->
+<!-- <ion-button class = "Submit" expand= "block" style="--background: #E57844" (click) = "saveTravel()"> Submit </ion-button> -->
 
 
 
@@ -73,8 +83,8 @@
         <ion-input name="title" [(ngModel)]="title" class="text-input" placeholder="Project Title"></ion-input>
       </ion-item>
     </ion-col>
-    <ion-col size="9" class="ion-text-center">
-      <ion-button class = "Submit" style="--background: #E57844" > Submit </ion-button>
+    <ion-col size="8" class="ion-text-center">
+      <ion-button class = "Submit" style="--background: #E57844" (click) = "saveTravel()"> Submit </ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>
