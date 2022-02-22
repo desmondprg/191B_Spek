@@ -28,46 +28,291 @@
       </ion-segment>
   </ion-toolbar>
 
-
+<!-- TRAVEL -->
   <div [ngSwitch] = "type">
     <ion-card *ngSwitchCase="'1'">
-      <ion-card-content id="q1">What was your primary method of travel?</ion-card-content>
-      <ion-list id= "a1" >
+      <!-- Question 1 -->
+      <ion-card-content id="question">What was your primary method of travel?</ion-card-content>
+      <ion-list id= "answer" >
         <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
           <ion-item>
             <ion-label>Plane</ion-label>
-            <ion-radio slot="start" value="plane"></ion-radio>
+            <ion-radio slot="start" value="1"></ion-radio>
           </ion-item>
       
           <ion-item>
-            <ion-label>Car or Rideshare</ion-label>
-            <ion-radio slot="start" value="car"></ion-radio>
+            <ion-label>Car</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
           </ion-item>
       
           <ion-item>
             <ion-label>Bike</ion-label>
-            <ion-radio slot="start" value="bike"></ion-radio>
+            <ion-radio slot="start" value="3"></ion-radio>
           </ion-item>
-
+          <ion-item>
+            <ion-label>Train</ion-label>
+            <ion-radio slot="start" value="4"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Boat</ion-label>
+            <ion-radio slot="start" value="5"></ion-radio>
+            <!-- <ion-radio slot="start" value="bike"></ion-radio> -->
+          </ion-item>
           <ion-item>
             <ion-label>Walk</ion-label>
             <ion-radio slot="start" value="Walk"></ion-radio>
           </ion-item>
-
           <ion-item>
             <ion-label>Public Transportation(Bus,Train)</ion-label>
             <ion-radio slot="start" value="public"></ion-radio>
           </ion-item>
         </ion-radio-group>
       </ion-list>
+
+      <br>
+      <br> 
+
+      <!-- Question 2 -->
+      <ion-card-content id="question">How many miles did you walk?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>0-2.9</ion-label>
+            <ion-radio slot="start" value="3"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>3-5.9</ion-label>
+            <ion-radio slot="start" value="6"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>6-10</ion-label>
+            <ion-radio slot="start" value="10"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <br>
+      <br> 
+
+      <!-- Question 3 -->
+      <ion-card-content id="question">How many times did you use public transporttion?  (Bus, trains, trams, etc)</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>0-2</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>3-5</ion-label>
+            <ion-radio slot="start" value="5"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>6-10</ion-label>
+            <ion-radio slot="start" value="10"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
     </ion-card>
 
+    
+
+    <!-- SHOPPING -->
     <ion-card *ngSwitchCase="'2'">
-      <ion-card-content>2</ion-card-content>
+      <!-- Question 1 -->
+      <ion-card-content id="question">How many times did you buy from local Farmer's Markets?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>0-2</ion-label>
+            <ion-radio slot="start" value="3"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>3-5</ion-label>
+            <ion-radio slot="start" value="5"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>6-10</ion-label>
+            <ion-radio slot="start" value="10"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <br>
+      <br> 
+
+      <!-- Question 2 -->
+      <ion-card-content id="question">Was your diet plant-based or higher in meats?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>Only plant-based</ion-label>
+            <ion-radio slot="start" value="-2"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Mostly plant-based</ion-label>
+            <ion-radio slot="start" value="-1"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Split between plant-based and meat</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Mostly meat</ion-label>
+            <ion-radio slot="start" value="1"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Only meat</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+      
+      <br>
+      <br> 
+
+      <!-- Question 3 -->
+      <ion-card-content id="question">Did you use reusable bags or single-use bags during your trip?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>Only reusable bags</ion-label>
+            <ion-radio slot="start" value="-2"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Mostly reusable bags</ion-label>
+            <ion-radio slot="start" value="-1"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Split between plant-based and single-use bags</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Mostly single-use bags</ion-label>
+            <ion-radio slot="start" value="1"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Only single-use bags</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
     </ion-card>
 
+    <!-- SUSTAINABILITY -->
     <ion-card *ngSwitchCase="'3'">
-      <ion-card-content>3</ion-card-content>
+      <!-- Question 1 -->
+      <ion-card-content id="question">How long did you leave the air conditioning or heater on for?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>0-2 Hours</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>2-4 Hours</ion-label>
+            <ion-radio slot="start" value="4"></ion-radio>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>4-6 Hours</ion-label>
+            <ion-radio slot="start" value="6"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>6-8 Hours</ion-label>
+            <ion-radio slot="start" value="8"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>8+ Hours</ion-label>
+            <ion-radio slot="start" value="10"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <br>
+      <br> 
+
+      <!-- Question 2 -->
+      <ion-card-content id="question">How many disposable water bottles did you use?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>None</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>1-2</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>3-4</ion-label>
+            <ion-radio slot="start" value="4"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>5-6</ion-label>
+            <ion-radio slot="start" value="6"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>7+</ion-label>
+            <ion-radio slot="start" value="7"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
+      <br>
+      <br> 
+
+      <!-- Question 3 -->
+      <ion-card-content id="question">Did you leave the lights on when leaving the room?</ion-card-content>
+      <ion-list id= "answer" >
+        <ion-radio-group value="Qtravel" [(ngModel)]="valueSelected" >
+          <ion-item>
+            <ion-label>Never</ion-label>
+            <ion-radio slot="start" value="0"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Sometimes</ion-label>
+            <ion-radio slot="start" value="2"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Most of the time</ion-label>
+            <ion-radio slot="start" value="4"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Always</ion-label>
+            <ion-radio slot="start" value="6"></ion-radio>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Unsure</ion-label>
+            <ion-radio slot="start" value="8"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+
     </ion-card>
 </div>
  
