@@ -9,6 +9,10 @@ import { Location } from '@angular/common';
 export class FormPage implements OnInit {
 
   grandTotal = 0;
+  travelTotal = 0;
+  shoppingTotal = 0;
+  sustainTotal = 0;
+
   valueSelected:String;
 
   q1:String;
@@ -42,30 +46,37 @@ export class FormPage implements OnInit {
     switch(this.q1) {
       case "a":
         this.grandTotal += 50;
+        this.travelTotal += 50;
         break;
 
       case "b":
         this.grandTotal += 50;
+        this.travelTotal += 50;
       break;
 
       case "c":
         this.grandTotal += 100;
+        this.travelTotal += 100;
       break;
 
       case "d":
         this.grandTotal += 50;
+        this.travelTotal += 50;
       break;
 
       case "e":
         this.grandTotal += 50;
+        this.travelTotal += 50;
       break;
 
       case "f":
         this.grandTotal += 100;
+        this.travelTotal += 100;
       break;
 
       case "g":
         this.grandTotal += 75;
+        this.travelTotal += 75;
       break;
     }
   }
@@ -74,14 +85,17 @@ export class FormPage implements OnInit {
     switch(this.q2) {
       case "a":
         this.grandTotal += 50;
+        this.travelTotal += 50;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.travelTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 100;
+        this.travelTotal += 100;
       break;
     }
   }
@@ -90,14 +104,17 @@ export class FormPage implements OnInit {
     switch(this.q3) {
       case "a":
         this.grandTotal += 50;
+        this.travelTotal += 50;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.travelTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 100;
+        this.travelTotal += 100;
       break;
     }
   }
@@ -106,14 +123,17 @@ export class FormPage implements OnInit {
     switch(this.q4) {
       case "a":
         this.grandTotal += 50;
+        this.shoppingTotal += 50;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.shoppingTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 100;
+        this.shoppingTotal += 100;
       break;
     }
   }
@@ -122,22 +142,27 @@ export class FormPage implements OnInit {
     switch(this.q5) {
       case "a":
         this.grandTotal += 100;
+        this.shoppingTotal += 100;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.shoppingTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 50;
+        this.shoppingTotal += 50;
       break;
 
       case "d":
         this.grandTotal += 25;
+        this.shoppingTotal += 25;
       break;
 
       case "e":
         this.grandTotal += 0;
+        this.shoppingTotal += 0;
       break;
     }
   }
@@ -146,22 +171,27 @@ export class FormPage implements OnInit {
     switch(this.q6) {
       case "a":
         this.grandTotal += 100;
+        this.shoppingTotal += 100;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.shoppingTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 50;
+        this.shoppingTotal += 50;
       break;
 
       case "d":
         this.grandTotal += 25;
+        this.shoppingTotal += 25;
       break;
 
       case "e":
         this.grandTotal += 0;
+        this.shoppingTotal += 0;
       break;
     }
   }
@@ -170,22 +200,27 @@ export class FormPage implements OnInit {
     switch(this.q7) {
       case "a":
         this.grandTotal += 0;
+        this.sustainTotal += 0;
         break;
 
       case "b":
         this.grandTotal += 25;
+        this.sustainTotal += 25;
       break;
 
       case "c":
         this.grandTotal += 50;
+        this.sustainTotal += 50;
       break;
 
       case "d":
         this.grandTotal += 75;
+        this.sustainTotal += 75;
       break;
 
       case "e":
         this.grandTotal += 100;
+        this.sustainTotal += 100;
       break;
     }
   }
@@ -195,22 +230,27 @@ export class FormPage implements OnInit {
     switch(this.q8) {
       case "a":
         this.grandTotal += 100;
+        this.sustainTotal += 100;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.sustainTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 50;
+        this.sustainTotal += 50;
       break;
 
       case "d":
         this.grandTotal += 25;
+        this.sustainTotal += 25;
       break;
 
       case "e":
         this.grandTotal += 0;
+        this.sustainTotal += 0;
       break;
     }
   }
@@ -219,22 +259,27 @@ export class FormPage implements OnInit {
     switch(this.q9) {
       case "a":
         this.grandTotal += 100;
+        this.sustainTotal += 100;
         break;
 
       case "b":
         this.grandTotal += 75;
+        this.sustainTotal += 75;
       break;
 
       case "c":
         this.grandTotal += 50;
+        this.sustainTotal += 50;
       break;
 
       case "d":
         this.grandTotal += 25;
+        this.sustainTotal += 25;
       break;
 
       case "e":
         this.grandTotal += 0;
+        this.sustainTotal += 0;
       break;
     }
   }
@@ -250,6 +295,9 @@ export class FormPage implements OnInit {
     this.computeQ8();
     this.computeQ9();
     console.log("Eco Score: ", this.grandTotal)
+    console.log("Travel Score: ", this.travelTotal)
+    console.log("Shopping Score: ", this.shoppingTotal)
+    console.log("Sustainability Score: ", this.sustainTotal)
     this.q1 = null;
     this.q2 = null;
     this.q3 = null;
