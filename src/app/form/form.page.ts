@@ -328,7 +328,10 @@ export class FormPage implements OnInit {
     FormPage.quizData["Shopping Score"] = this.shoppingTotal;
     FormPage.quizData["Sustainability Score"] = this.sustainTotal;
     FormPage.quizData["Date"] = new Date();
-    FormPage.allData.push(FormPage.quizData);
+    FormPage.quizData["String"] = "Eco Score: " + this.grandTotal + ", "+ "Travel Score: "+ this.travelTotal + ", "+"Shopping Score: "+ this.shoppingTotal + ", "+ "Sustainability Score: "+ this.sustainTotal + ", "+"Date: "+ new Date();
+    FormPage.allData.unshift(FormPage.quizData);
+    FormPage.quizData = {};
+    console.log("FormPage: ", FormPage.allData)
     console.log("Eco Score: ", this.grandTotal)
     console.log("Travel Score: ", this.travelTotal)
     console.log("Shopping Score: ", this.shoppingTotal)

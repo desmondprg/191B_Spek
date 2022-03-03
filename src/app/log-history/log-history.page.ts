@@ -17,16 +17,13 @@ export class LogHistoryPage implements OnInit {
 
   ngOnInit() {
     this.storage.create();
-    this.storedData = FormPage.allData;
-    for(let i = 0; i < this.storedData.length; i++){
-      this.storedData[i] = JSON.stringify(this.storedData[i]);
+    for(let i = 0; i < FormPage.allData.length; i++){
+      this.storedData[i] = FormPage.allData[i].String;
+      console.log(this.storedData[i]);
+
     }
-    this.storage.set('practice',this.storedData).then((data) => {
-      console.log("getRating", data);
-    });
-    // this.storage.set('allData',this.storedData).then((data) => {
-    //   console.log("getRating", data);
-    // });
+    console.log("StoredData: ",this.storedData)
+
   }
 
   back():void
@@ -44,6 +41,4 @@ export class LogHistoryPage implements OnInit {
     return FormPage.allData;
   }
 
-  makeStr(){
-  }
 }
