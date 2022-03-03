@@ -12,10 +12,8 @@ import { Storage } from '@ionic/storage';
 export class HomePage {
   constructor(public formPage:FormPage, public storage:Storage) {}
 
-  public static allData = [];
   ngOnInit() {
     this.storage.create();
-    // this.storageLoad();
   }
 
   // Doughnut
@@ -42,10 +40,8 @@ export class HomePage {
 
 
   async getRating(){
-    HomePage.allData.push(this.quizData);
-    this.storage.set('allData',HomePage.allData).then((data) => {
-      console.log("getRating", data);
-    });
+    // HomePage.allData.push(this.quizData);
+
 
   }
 }
