@@ -10,6 +10,7 @@ import { Storage } from '@ionic/storage';
 export class FormPage implements OnInit {
 
   public static quizData = {};
+  public static allData = [];
   grandTotal = 0;
   travelTotal = 0;
   shoppingTotal = 0;
@@ -327,6 +328,7 @@ export class FormPage implements OnInit {
     FormPage.quizData["Shopping Score"] = this.shoppingTotal;
     FormPage.quizData["Sustainability Score"] = this.sustainTotal;
     FormPage.quizData["Date"] = new Date();
+    FormPage.allData.push(FormPage.quizData);
     console.log("Eco Score: ", this.grandTotal)
     console.log("Travel Score: ", this.travelTotal)
     console.log("Shopping Score: ", this.shoppingTotal)
@@ -341,6 +343,10 @@ export class FormPage implements OnInit {
     this.q8 = null;
     this.q9 = null;
     this.grandTotal = 0;
+    this.travelTotal = 0;
+    this.sustainTotal = 0;
+    this.shoppingTotal = 0;
+    this.back();
   }
 
 }
