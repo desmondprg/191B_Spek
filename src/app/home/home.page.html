@@ -16,7 +16,7 @@
   <br> 
     <ion-toolbar id = "icon_toolbar">
       <ion-buttons slot = "secondary">
-          <ion-button [routerLink] = "['/log-history']" id = "log_icon">
+          <ion-button [routerLink] = "['/log-history']" id = "log_icon" (click) = "getRating()">
             <ion-icon name = "logs" size = "large" slot = "icon-only" src=".\assets\icon\entries.svg"></ion-icon>
           </ion-button>
         </ion-buttons>

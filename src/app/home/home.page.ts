@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ChartType } from 'chart.js';
 import { MultiDataSet, Label, Color } from 'ng2-charts'; 
+import { FormPage } from '../form/form.page';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +10,13 @@ import { MultiDataSet, Label, Color } from 'ng2-charts';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(public formPage:FormPage, public storage:Storage) {}
+
+  public static allData = [];
+  ngOnInit() {
+    this.storage.create();
+    // this.storageLoad();
+  }
 
   // Doughnut
   public doughnutChartLabels: Label[] = ['Shopping', 'Travel', 'Sustainability'];
@@ -20,5 +29,23 @@ export class HomePage {
     {backgroundColor:["#E57844","#C47575","#75BDC4"]}
   ];
   
-  constructor() {}
+
+  // storageLoad(){
+  //   this.storage.set('allData',this.allData).then((data) => {
+  //     // console.log("Storage Load: ", data);
+  //   });
+  // }
+  
+  get quizData(){
+    return FormPage.quizData;
+  }
+
+
+  async getRating(){
+    HomePage.allData.push(this.quizData);
+    this.storage.set('allData',HomePage.allData).then((data) => {
+      console.log("getRating", data);
+    });
+
+  }
 }
