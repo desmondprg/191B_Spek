@@ -16,6 +16,11 @@ ion-header {
   ion-icon {
     color: #E57844;
   }
+
+  ion-item{
+    font-size: 8;
+    --background: #E57844;
+  }
   
   .footer {
     background: #EEEEEE;

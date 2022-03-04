@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-form',
@@ -8,6 +9,8 @@ import { Location } from '@angular/common';
 })
 export class FormPage implements OnInit {
 
+  public static quizData = {};
+  public static allData = [];
   grandTotal = 0;
   travelTotal = 0;
   shoppingTotal = 0;
@@ -30,12 +33,13 @@ export class FormPage implements OnInit {
 
 
   type:String;
-  constructor(private location: Location) { }
+  constructor(private location: Location, public storage:Storage) { }
 
   
 
   ngOnInit() {
     this.type = "1";
+    this.storage.create();
   }
 
   back():void {
@@ -288,6 +292,31 @@ export class FormPage implements OnInit {
     }
   }
 
+  public getTravelTotal(){
+    var total = this.travelTotal;
+    console.log("Travel Total:", total);
+    return total;
+  }
+
+  public getShoppingTotal(){
+    var total = this.shoppingTotal;
+    console.log("Shopping Total:", total);
+    return total;
+  }
+
+  public getSustainTotal(){
+    var total = this.sustainTotal;
+    console.log("Sustain Total:", total);
+    return total;
+  }
+
+  public getGrandTotal(){
+    var total = this.grandTotal;
+    console.log("Grand Total:", total);
+    return total;
+  }
+
+
   saveTravel(){
     this.computeQ1();
     this.computeQ2();
@@ -298,10 +327,19 @@ export class FormPage implements OnInit {
     this.computeQ7();
     this.computeQ8();
     this.computeQ9();
-    console.log("Eco Score: ", this.grandTotal);
-    console.log("Travel Score: ", this.travelTotal);
-    console.log("Shopping Score: ", this.shoppingTotal);
-    console.log("Sustainability Score: ", this.sustainTotal);
+    FormPage.quizData["Eco Score"] = this.grandTotal;
+    FormPage.quizData["Travel Score"] = this.travelTotal;
+    FormPage.quizData["Shopping Score"] = this.shoppingTotal;
+    FormPage.quizData["Sustainability Score"] = this.sustainTotal;
+    FormPage.quizData["Date"] = new Date();
+    FormPage.quizData["String"] = "Eco Score: " + this.grandTotal + ", "+ "Travel Score: "+ this.travelTotal + ", "+"Shopping Score: "+ this.shoppingTotal + ", "+ "Sustainability Score: "+ this.sustainTotal + ", "+"Date: "+ new Date();
+    FormPage.allData.unshift(FormPage.quizData);
+    FormPage.quizData = {};
+    console.log("FormPage: ", FormPage.allData)
+    console.log("Eco Score: ", this.grandTotal)
+    console.log("Travel Score: ", this.travelTotal)
+    console.log("Shopping Score: ", this.shoppingTotal)
+    console.log("Sustainability Score: ", this.sustainTotal)
     this.q1 = null;
     this.q2 = null;
     this.q3 = null;

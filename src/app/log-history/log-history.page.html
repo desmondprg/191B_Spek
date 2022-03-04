@@ -26,4 +26,7 @@
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
       </div>
 
+  <ion-list>
+    <ion-item *ngFor = "let sleep of storedData">{{sleep}}</ion-item>
+  </ion-list>
 </ion-content>
