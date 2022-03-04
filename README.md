@@ -34,3 +34,6 @@ Team Members: Carlos Guzman, Dayanara Melara, Derek Song, Desmond Garrido, Maika
 
     - With your directory set inside the project folder (cd into the 191B-SPEK folder), run this line in your terminal: ``` ionic lab ```
     - This will start the app  at ``` localhost:8200 ```
+
+
+**Note: The appearance of the CSS when running the application through ionic (ionic lab), is affected by the theme of your computer. On Windows, if you are currently running the dark theme in the user settings, you must change your theme to light in order to display the CSS styling in it's intended way.**
