@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { DraftsPage } from '../drafts/drafts.page';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.page.html',
-  styleUrls: ['./form.page.scss'],
+  selector: 'app-draft-edit',
+  templateUrl: './draft-edit.page.html',
+  styleUrls: ['./draft-edit.page.scss'],
 })
-export class FormPage implements OnInit {
+export class DraftEditPage implements OnInit {
 
+  pastAnswers = [];
   grandTotal = 0;
   travelTotal = 0;
   shoppingTotal = 0;
@@ -26,16 +28,53 @@ export class FormPage implements OnInit {
   q9:String;
 
   public static answerList = [];
-  public static transferList = [];
+  // public static draftItem = {};
 
 
   type:String;
-  constructor(private location: Location) { }
+  constructor(private location: Location, public draftsPage:DraftsPage) { }
+  
 
   
 
   ngOnInit() {
     this.type = "1";
+    this.pastAnswers = DraftsPage.storedAnswers;
+
+    var a1;
+    var a2;
+    var a3;
+    var a4;
+    var a5;
+    var a6;
+    var a7;
+    var a8;
+    var a9;
+    
+
+    a1 = this.pastAnswers[0];
+    a2 = this.pastAnswers[1];
+    a3 = this.pastAnswers[2];
+    a4 = this.pastAnswers[3];
+    a5 = this.pastAnswers[4];
+    a6 = this.pastAnswers[5];
+    a7 = this.pastAnswers[6];
+    a8 = this.pastAnswers[7];
+    a9 = this.pastAnswers[8];
+
+    this.q1 = a1;
+    this.q2 = a2;
+    this.q3 = a3;
+    this.q4 = a4;
+    this.q5 = a5;
+    this.q6 = a6;
+    this.q7 = a7;
+    this.q8 = a8;
+    this.q9 = a9;
+
+    console.log(this.pastAnswers);
+    console.log(this.q1);
+    console.log(this.pastAnswers[0]);
   }
 
   back():void {
@@ -318,18 +357,16 @@ export class FormPage implements OnInit {
   }
 
   saveDraft(){
-    FormPage.answerList.push(this.q1);
-    FormPage.answerList.push(this.q2);
-    FormPage.answerList.push(this.q3);
-    FormPage.answerList.push(this.q4);
-    FormPage.answerList.push(this.q5);
-    FormPage.answerList.push(this.q6);
-    FormPage.answerList.push(this.q7);
-    FormPage.answerList.push(this.q8);
-    FormPage.answerList.push(this.q9);
-    FormPage.answerList.push(new Date().toLocaleString());
-    FormPage.transferList = FormPage.answerList.slice(0);
-    FormPage.answerList = [];
+    DraftEditPage.answerList.push(this.q1);
+    DraftEditPage.answerList.push(this.q2);
+    DraftEditPage.answerList.push(this.q3);
+    DraftEditPage.answerList.push(this.q4);
+    DraftEditPage.answerList.push(this.q5);
+    DraftEditPage.answerList.push(this.q6);
+    DraftEditPage.answerList.push(this.q7);
+    DraftEditPage.answerList.push(this.q8);
+    DraftEditPage.answerList.push(this.q9);
+    DraftEditPage.answerList.push(new Date().toLocaleString());
     this.back();
   }
 

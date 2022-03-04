@@ -15,7 +15,7 @@ export class LogHistoryPage implements OnInit {
   }
 
   back():void
-{
-  this.location.back()
-}
+  {
+    this.location.back()
+  }
 }

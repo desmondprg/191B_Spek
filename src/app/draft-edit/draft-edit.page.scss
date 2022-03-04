@@ -1,0 +1,97 @@
+
+
+ion-header {
+  // --background: white;
+  --background: orange;
+  // text-align: center;
+}
+
+#top-nav{
+--background: white;
+}
+
+#categories {
+--backgroud: #E57844;
+}
+
+ion-title {
+font-weight: bold;
+}
+
+ion-content {
+--background: #EEEEEE;
+}
+
+ion-icon {
+color: #E57844;
+}
+
+//   .toolbar-title {
+//     text-overflow: inherit;
+//     white-space: normal;
+//  }
+
+.footer {
+  background: #EEEEEE;
+  padding-top: 0%;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+#footer_toolbar {
+  --background: #EEEEEE;
+}
+
+#share_icon {
+  --padding-start: 0%;
+}
+
+#icon_toolbar {
+  --background: #EEEEEE;
+}
+
+div{
+  font-size: 14px;
+}
+
+#question {
+  background-color: #E57844;
+  color: white;
+}
+
+#answer {
+  background-color: white;
+}
+
+.Submit {
+  background-color: #E57844;
+  --background: #E57844;
+  --background-hover: gray;
+  // position: absolute;
+  // color: #E57844;
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar id = "top-nav">
+    <ion-buttons slot="start">
+      <ion-button (click) = "back()" id=" history-back">
+          <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Drafts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <br>
+  <ion-list>
+    <ion-item id="dateDraft" *ngFor = "let draftItem of storedDrafts">{{storedDrafts}}</ion-item>
+    <!-- <ion-item >{{answerDate}}</ion-item> -->
+    <ion-buttons slot = "primary" [routerLink] = "['/draft-edit']">
+        <ion-button class = "Submit" shape = "round" >
+          Edit Draft
+        </ion-button>
+    </ion-buttons> 
+  </ion-list>
+
+  <br>
+  <br>
+
+      <!-- <ion-grid>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="8" class="ion-text-center">
+            <ion-item lines="none" id="projectTitle" *ngIf="nextOptions == 'previous'">
+              <ion-input name="title" [(ngModel)]="title" class="text-input" placeholder="Project Title"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="8" class="ion-text-center">
+            <ion-button class = "Submit" style="--background: #E57844" (click) = "printData()"> Save as Draft </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid> -->
+</ion-content>

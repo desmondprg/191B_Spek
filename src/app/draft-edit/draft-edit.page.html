@@ -14,7 +14,7 @@
 </ion-header>
 
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
   <ion-toolbar>
       <ion-segment color="danger"  mode = "ios" [(ngModel)]="type"   (ionChange)="segmentChanged($event)" value = "travel" >
         <ion-segment-button  value="1">
@@ -35,10 +35,10 @@
       <!-- Question 1 -->
       <ion-card-content id="question">What was your primary method of travel?</ion-card-content>
       <ion-list id= "answer" >
-        <ion-radio-group value="Qtravel" [(ngModel)]="q1" >
+        <ion-radio-group value="a" [(ngModel)]="q1" >
           <ion-item>
             <ion-label>Plane</ion-label>
-            <ion-radio slot="start" value="a"></ion-radio>
+            <ion-radio slot="start" checked = "true" value="a"></ion-radio>
           </ion-item>
       
           <ion-item>
@@ -323,17 +323,22 @@
 
 <!-- <ion-button class = "Submit" expand= "block" style="--background: #E57844" (click) = "saveTravel()"> Submit </ion-button> -->
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-<!-- <ion-grid>
+<ion-grid>
   <ion-row class="ion-align-items-center">
-    <ion-col  class="ion-text-center">
+    <ion-col size="9" class="ion-text-center">
       <ion-item lines="none" id="projectTitle" *ngIf="nextOptions == 'previous'">
         <ion-input name="title" [(ngModel)]="title" class="text-input" placeholder="Project Title"></ion-input>
       </ion-item>
     </ion-col>
-    <ion-col class="ion-text-center">
-      <ion-button expand="block" class = "Submit" style="--background: #E57844" (click) = "saveTravel()"> Submit </ion-button>
+    <ion-col size="8" class="ion-text-center">
+      <ion-button class = "Submit" style="--background: #E57844" (click) = "saveTravel()"> Submit </ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>
@@ -343,31 +348,16 @@
 
 <ion-grid>
   <ion-row class="ion-align-items-center">
-    <ion-col  class="ion-text-center">
+    <ion-col size="8" class="ion-text-center">
       <ion-item lines="none" id="projectTitle" *ngIf="nextOptions == 'previous'">
         <ion-input name="title" [(ngModel)]="title" class="text-input" placeholder="Project Title"></ion-input>
       </ion-item>
     </ion-col>
-    <ion-col  class="ion-text-center">
-      <ion-button expand="block" class = "Submit" style="--background: #E57844" (click) = "saveDraft()"> Save as Draft </ion-button>
+    <ion-col size="8" class="ion-text-center">
+      <ion-button class = "Submit" style="--background: #E57844" (click) = "saveDraft()"> Save as Draft </ion-button>
     </ion-col>
   </ion-row>
-</ion-grid> -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<ion-button class = "Submit" shape = "round" expand="full"  (click) = "saveTravel()"> Submit </ion-button>
-
-
-<br>
-<br> 
-
-<ion-button class = "Submit" shape = "round" expand="full"  (click) = "saveDraft()"> Save as Draft </ion-button>
+</ion-grid>
 
 <br>
 <br>

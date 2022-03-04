@@ -1,36 +1,20 @@
-
-
 ion-header {
-    // --background: white;
-    --background: orange;
+    --background: white;
     // text-align: center;
   }
-
-#top-nav{
---background: white;
-}
-
-#categories {
-  --backgroud: #E57844;
-}
-
-ion-title {
-  font-weight: bold;
-}
-
-ion-content {
-  --background: #EEEEEE;
-}
-
-ion-icon {
-  color: #E57844;
-}
   
-//   .toolbar-title {
-//     text-overflow: inherit;
-//     white-space: normal;
-//  }
-
+  ion-title {
+    font-weight: bold;
+  }
+  
+  ion-content {
+    --background: #EEEEEE;
+  }
+  
+  ion-icon {
+    color: #E57844;
+  }
+  
   .footer {
     background: #EEEEEE;
     padding-top: 0%;
@@ -79,19 +63,15 @@ ion-icon {
     font-size: 14px;
   }
 
-  #question {
-    background-color: #E57844;
-    color: white;
-  }
-
-  #answer {
-    background-color: white;
-  }
-
   .Submit {
     background-color: #E57844;
     --background: #E57844;
     --background-hover: gray;
+    color: white;
     // position: absolute;
     // color: #E57844;
+  }
+
+  #dateDraft{
+    color: black;
   }
