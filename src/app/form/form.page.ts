@@ -353,6 +353,7 @@ export class FormPage implements OnInit {
     this.travelTotal = 0;
     this.shoppingTotal = 0;
     this.sustainTotal = 0;
+    this.back();
   }
 
   saveDraft(){
